@@ -1,0 +1,331 @@
+{
+  "activeModules": [
+    {
+      "id": "about-time",
+      "title": "About Time",
+      "version": ""
+    },
+    {
+      "id": "action-tracker",
+      "title": "Action Tracker",
+      "version": ""
+    },
+    {
+      "id": "ActiveAuras",
+      "title": "Active Auras",
+      "version": ""
+    },
+    {
+      "id": "ATL",
+      "title": "Active Token Effects",
+      "version": ""
+    },
+    {
+      "id": "always-hp",
+      "title": "Always HP",
+      "version": ""
+    },
+    {
+      "id": "enhancedcombathud-dnd5e",
+      "title": "Argon - Combat HUD (DND5E)",
+      "version": ""
+    },
+    {
+      "id": "autoanimations",
+      "title": "Automated Animations",
+      "version": ""
+    },
+    {
+      "id": "combat-tracker-dock",
+      "title": "Carousel Combat Tracker",
+      "version": ""
+    },
+    {
+      "id": "chris-premades",
+      "title": "Cauldron of Plentiful Resources",
+      "version": ""
+    },
+    {
+      "id": "combatbooster",
+      "title": "Combat Booster: Turn Marker, Recent Actions and more",
+      "version": ""
+    },
+    {
+      "id": "dnd5e-animations",
+      "title": "D&D5e Animations",
+      "version": ""
+    },
+    {
+      "id": "ddb-importer",
+      "title": "DDB-Importer: A D&D Beyond Integrator",
+      "version": ""
+    },
+    {
+      "id": "dfreds-convenient-effects",
+      "title": "DFreds Convenient Effects",
+      "version": ""
+    },
+    {
+      "id": "dice-so-nice",
+      "title": "Dice So Nice!",
+      "version": ""
+    },
+    {
+      "id": "dice-calculator",
+      "title": "Dice Tray",
+      "version": ""
+    },
+    {
+      "id": "drag-ruler",
+      "title": "Drag Ruler",
+      "version": ""
+    },
+    {
+      "id": "dscryb",
+      "title": "dScryb",
+      "version": ""
+    },
+    {
+      "id": "dnd-dungeon-masters-guide",
+      "title": "Dungeons & Dragons Dungeon Master's Guide",
+      "version": ""
+    },
+    {
+      "id": "dnd-monster-manual",
+      "title": "Dungeons & Dragons Monster Manual",
+      "version": ""
+    },
+    {
+      "id": "dnd-players-handbook",
+      "title": "Dungeons & Dragons Player's Handbook",
+      "version": ""
+    },
+    {
+      "id": "dae",
+      "title": "Dynamic effects using Active Effects (DAE)",
+      "version": ""
+    },
+    {
+      "id": "easy-notes",
+      "title": "Easy Notes",
+      "version": ""
+    },
+    {
+      "id": "effectmacro",
+      "title": "Effect Macro",
+      "version": ""
+    },
+    {
+      "id": "fxmaster",
+      "title": "FXMaster",
+      "version": ""
+    },
+    {
+      "id": "gambits-premades",
+      "title": "Gambit's Premades",
+      "version": ""
+    },
+    {
+      "id": "hero-mancer",
+      "title": "Hero Mancer",
+      "version": ""
+    },
+    {
+      "id": "item-piles",
+      "title": "Item Piles",
+      "version": ""
+    },
+    {
+      "id": "JB2A_DnD5e",
+      "title": "JB2A - Jules and Ben's Animated Assets - Free Content",
+      "version": ""
+    },
+    {
+      "id": "kctg-5e",
+      "title": "Kris's Compendium of Trade Goods - DnD5e edition",
+      "version": ""
+    },
+    {
+      "id": "enhancedcombathud",
+      "title": "Library - Argon - Combat HUD (CORE)",
+      "version": ""
+    },
+    {
+      "id": "colorsettings",
+      "title": "Library - Color Settings",
+      "version": ""
+    },
+    {
+      "id": "lib-dfreds-ui-extender",
+      "title": "Library - Lib: DFreds UI Extender",
+      "version": ""
+    },
+    {
+      "id": "lib-wrapper",
+      "title": "Library - libWrapper",
+      "version": "0"
+    },
+    {
+      "id": "settings-extender",
+      "title": "Library - Settings Extender",
+      "version": ""
+    },
+    {
+      "id": "socketlib",
+      "title": "Library - socketlib",
+      "version": ""
+    },
+    {
+      "id": "token-action-hud-core",
+      "title": "Library - Token Action HUD Core",
+      "version": ""
+    },
+    {
+      "id": "midi-item-showcase-community",
+      "title": "Midi Item Showcase - Community",
+      "version": ""
+    },
+    {
+      "id": "midi-qol",
+      "title": "Midi QOL",
+      "version": ""
+    },
+    {
+      "id": "module-credits",
+      "title": "Module Management+",
+      "version": ""
+    },
+    {
+      "id": "monks-active-tiles",
+      "title": "Monk's Active Tile Triggers",
+      "version": ""
+    },
+    {
+      "id": "monks-enhanced-journal",
+      "title": "Monk's Enhanced Journal",
+      "version": ""
+    },
+    {
+      "id": "monks-little-details",
+      "title": "Monk's Little Details",
+      "version": ""
+    },
+    {
+      "id": "monks-player-settings",
+      "title": "Monk's Player Settings",
+      "version": ""
+    },
+    {
+      "id": "monks-scene-navigation",
+      "title": "Monk's Scene Navigation",
+      "version": ""
+    },
+    {
+      "id": "monks-sound-enhancements",
+      "title": "Monk's Sound Enhancements",
+      "version": ""
+    },
+    {
+      "id": "monks-tokenbar",
+      "title": "Monk's TokenBar",
+      "version": ""
+    },
+    {
+      "id": "fvtt-party-resources",
+      "title": "Party Resources",
+      "version": ""
+    },
+    {
+      "id": "psfx",
+      "title": "PSFX - Peri's Sound Effects",
+      "version": ""
+    },
+    {
+      "id": "quickstart-shops",
+      "title": "Quickstart Shops",
+      "version": "52316"
+    },
+    {
+      "id": "region-attacher",
+      "title": "Region Attacher",
+      "version": ""
+    },
+    {
+      "id": "sequencer",
+      "title": "Sequencer",
+      "version": ""
+    },
+    {
+      "id": "foundryvtt-simple-calendar",
+      "title": "Simple Calendar",
+      "version": ""
+    },
+    {
+      "id": "splatter",
+      "title": "Splatter",
+      "version": ""
+    },
+    {
+      "id": "spotlight-omnisearch",
+      "title": "Spotlight Omnisearch",
+      "version": ""
+    },
+    {
+      "id": "dnd-tashas-cauldron",
+      "title": "Tasha's Cauldron of Everything",
+      "version": ""
+    },
+    {
+      "id": "tidy5e-sheet",
+      "title": "Tidy 5e Sheets",
+      "version": ""
+    },
+    {
+      "id": "times-up",
+      "title": "Times Up",
+      "version": ""
+    },
+    {
+      "id": "token-action-hud-dnd5e",
+      "title": "Token Action HUD D&D 5e",
+      "version": ""
+    },
+    {
+      "id": "vtta-tokenizer",
+      "title": "Tokenizer",
+      "version": ""
+    },
+    {
+      "id": "tokenmagic",
+      "title": "Token Magic FX",
+      "version": ""
+    },
+    {
+      "id": "crlngn-ui",
+      "title": "UI - Carolingian UI",
+      "version": ""
+    },
+    {
+      "id": "tidy-ui_game-settings",
+      "title": "UI - Tidy UI - Game Settings",
+      "version": ""
+    },
+    {
+      "id": "universal-animations",
+      "title": "Universal Animations",
+      "version": ""
+    },
+    {
+      "id": "your-turn",
+      "title": "Your Turn!",
+      "version": ""
+    }
+  ],
+  "inactiveModules": [
+    {
+      "id": "minimal-ui",
+      "title": "UI - Minimal UI",
+      "version": ""
+    }
+  ]
+}
