@@ -1,75 +1,36 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-    color: #333;
-  }
-  
-  header {
-    text-align: center;
-    background-color: #ffebcd;
-    padding: 20px;
-  }
-  
-  header h1 {
-    font-size: 2em;
-    color: #d2691e;
-  }
-  
-  header p {
-    font-size: 1.2em;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  section {
-    margin-bottom: 20px;
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  section h2 {
-    margin-top: 0;
-    color: #8b0000;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  ul li {
-    margin-bottom: 10px;
-  }
-  
-  button {
-    background-color: #8b0000;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #a52a2a;
-  }
-  
-  input, textarea {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #ffebcd;
-  }
+:root {
+  --color-red-800: #a40044;
+}
+h1, .meddon-regular {
+  font-family: "Meddon", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2, h3, .niconne-regular {
+  font-family: "Niconne", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html, .marmelad-regular {
+  font-family: "Marmelad", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bg-lines {
+background-repeat: repeat;
+background-color: var(--color-red-800);
+background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%23ffffff' fill-opacity='0.04' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.bg-flower {
+  background-image: url(./flowers.jpg);
+}
+
+
+/*[text-shadow:_0_1px_0_var(--tw-shadow-color)]*/
+.text-shadow {
+  text-shadow: 0 1px 0 rgba(0,0,0,.9), 0 2px 4px rgba(0,0,0,.8), 0 2px 8px rgba(0,0,0,0.7);
+}
