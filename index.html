@@ -91,15 +91,19 @@
       </ul>
       <button onclick="toggleLang()" aria-label="Cambia lingua / Switch language"
         class="ml-4 text-2xl flex items-center gap-2">
-        <span class="flex items-center gap-1" lang="it">
-          <span class="fi fi-it w-5 h-5 rounded-sm shadow-sm"></span>
-          <span class="text-base font-semibold">IT</span>
+        <span class="flag lang-it flex items-center gap-1">
+          <span class="fi fi-it w-5 h-5 rounded-sm"></span><span class="text-base font-semibold">IT</span>
         </span>
-        <span class="flex items-center gap-1" lang="en">
-          <span class="fi fi-gb w-5 h-5 rounded-sm shadow-sm"></span>
-          <span class="text-base font-semibold">EN</span>
+        <span class="flag lang-en flex items-center gap-1">
+          <span class="fi fi-gb w-5 h-5 rounded-sm"></span><span class="text-base font-semibold">EN</span>
         </span>
       </button>
+      <style>
+        [data-lang="it"] .lang-en,
+        [data-lang="en"] .lang-it {
+          display: none;
+        }
+      </style>
     </div>
   </nav>
 
