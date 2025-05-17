@@ -1,173 +1,281 @@
 <!DOCTYPE html>
-<html lang="it" class="snap-y lg:snap-none lg:text-[1.2em] scroll-smooth">
+<html lang="it" data-lang="it" class="scroll-smooth">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Invito al Matrimonio di Marinella & Cristiano </title>
-  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Matrimonio Nella &amp; Cristiano • Wedding Website</title>
+  <meta name="description"
+    content="Sito ufficiale del matrimonio di Marinella &amp; Cristiano – dettagli, mappa, RSVP." />
+
+  <!-- Tailwind CSS (minified CDN) -->
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@6/css/flag-icons.min.css">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Marmelad&family=Meddon&family=Niconne&display=swap"
     rel="stylesheet">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Matrimonio di Nella &amp; Cristiano" />
+  <meta property="og:description" content="Tutti i dettagli sul nostro grande giorno: cerimonia, ricevimento, RSVP." />
+  <meta property="og:image" content="https://example.com/og.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="it_IT" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <!-- Nasconde la lingua inattiva -->
+  <style>
+    html[data-lang="it"] [lang="en"],
+    html[data-lang="en"] [lang="it"] {
+      display: none
+    }
+  </style>
+
+  <!-- Lang toggle logic -->
+  <script>
+    (function () {
+      const saved = localStorage.getItem('lang');
+      if (saved) { document.documentElement.setAttribute('data-lang', saved) }
+      window.toggleLang = () => {
+        const current = document.documentElement.getAttribute('data-lang') === 'it' ? 'en' : 'it';
+        document.documentElement.setAttribute('data-lang', current);
+        localStorage.setItem('lang', current);
+      }
+    })();
+  </script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Matrimonio di Nella e Cristiano",
+    "startDate": "2025-09-20T11:30:00+02:00",
+    "location": {
+      "@type": "Place",
+      "name": "Chiesa di San Francesco d'Assisi",
+      "address": "Largo Plebiscito, 15, 70043 Monopoli BA, Italia"
+    },
+    "image": ["https://example.com/og.jpg"],
+    "description": "Celebrazione religiosa e ricevimento presso Tenuta Monacelle.",
+    "organizer": {
+      "@type": "Person",
+      "name": "Nella & Cristiano"
+    }
+  }
+  </script>
 </head>
 
-<body class="">
-  <header class="snap-start h-screen grid items-center bg-flower bg-cover bg-center">
-    <div class="max-w-5xl mx-auto p-4">
-      <h1 class="text-4xl lg:text-8xl m-4 text-white text-shadow text-center whitespace-pre-wrap p-8">Nella
-        <span class="text-xl lg:text-6xl">&</span>
-        Cristiano
-      </h1>
+<body class="font-sans antialiased bg-white text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+      <a href="#top" class="text-xl font-semibold text-red-800">N &amp; C</a>
+      <ul class="hidden md:flex gap-6 font-medium">
+        <li><a href="#invito" class="hover:text-red-700"><span lang="it">Invito</span><span lang="en">Invite</span></a>
+        </li>
+        <li><a href="#chiesa" class="hover:text-red-700"><span lang="it">Cerimonia</span><span
+              lang="en">Ceremony</span></a></li>
+        <li><a href="#ricevimento" class="hover:text-red-700"><span lang="it">Ricevimento</span><span
+              lang="en">Reception</span></a></li>
+        <li><a href="#faq" class="hover:text-red-700">FAQ</a></li>
+        <li><a href="#regalo" class="hover:text-red-700"><span lang="it">Regalo</span><span lang="en">Gift</span></a>
+        </li>
+      </ul>
+      <button onclick="toggleLang()" aria-label="Cambia lingua / Switch language"
+        class="ml-4 text-2xl flex items-center gap-2">
+        <span class="flex items-center gap-1" lang="it">
+          <span class="text-xl">🇮🇹</span>
+          <span class="fi fi-it w-5 h-5 rounded-sm shadow-sm"></span>
+        </span>
+        <span class="flex items-center gap-1" lang="en">
+          <span class="text-xl">🇬🇧</span>
+          <span class="fi fi-gb w-5 h-5 rounded-sm shadow-sm"></span>
+        </span>
+      </button>
     </div>
-  </header>
+  </nav>
 
-
-  <main class="bg-white">
-    <div class="max-w-5xl mx-auto">
-
-      <section id="invito" class="snap-start h-screen p-4">
-        <h2 class="text-6xl text-red-800 mb-12 text-center lg:text-left">Benvenuti!</h2>
-        <p>
-          Siamo felici di festeggiare il nostro giorno speciale con voi.
-          Scoprite tutti i dettagli qui sotto.
+  <main id="top" class="pt-[72px]">
+    <!-- Hero -->
+    <header class="relative h-screen bg-flower bg-cover bg-center flex items-center justify-center">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="relative text-center text-white">
+        <h1 class="meddon-regular text-5xl md:text-8xl text-shadow">Nella <span
+            class="text-3xl md:text-6xl">&amp;</span> Cristiano</h1>
+        <p class="mt-4 text-xl md:text-3xl tracking-widest">
+          <span lang="it">Sabato 20 Settembre 2025</span>
+          <span lang="en">Saturday 20 September 2025</span>
         </p>
-        <p class="text-4xl mt-8 whitespace-pre-wrap">Sabato,
-          20 Settembre 2025</p>
-        <ul class="my-4 leading-8">
-          <li><a href="#chiesa">Cerimonia Religiosa</a></li>
-          <li><a href="#mappa">Luogo dell'Evento</a></li>
-          <li><a href="#faq">Domande Frequenti</a></li>
-          <li><a href="#conferma">Conferma Partecipazione</a></li>
-        </ul>
-      </section>
+      </div>
+    </header>
 
-      <!-- Sezione Chiesa -->
-      <section id="chiesa" class="snap-start h-screen bg-white p-4">
-        <h2 class="text-5xl text-red-800 mb-12 text-center lg:text-left">Cerimonia Religiosa</h2>
-        <div class="grid lg:grid-cols-2 gap-2">
-          <div class="grid grid-cols-3 items-center lg:block gap-2">
-            <div class="col-span-2 m-4">
-              <span>
-                <a class="font-bold">Chiesa di San Francesco d'Assisi</a>
-                <p class="select-all underline decoration-pink-500 decoration-2 text-sm">Largo Plebiscito, 15, 70043
-                  Monopoli BA, Italia</p>
-                <a
-                  href="https://www.google.com/maps/place/Chiesa+di+San+Francesco+d'Assisi/@40.952891,17.3003746,18.25z/data=!4m6!3m5!1s0x1346350070e72ecd:0xec9bd94389ec0748!8m2!3d40.9526458!4d17.3012147!16s%2Fg%2F11lcym693j?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D">Indicazioni
-                  Google Maps</a>
-                <p class="text-lg font-bold text-red-800 mb-2">⏰ La messa inizierà alle 11:30</p>
-              </span>
-            </div>
-          </div>
-          <div style="width: 100%">
-            <iframe class="w-full h-full lg:aspect-square lg:h-auto rounded-xl drop-shadow-lg" width="100%" height="600"
-              frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Largo%20Plebiscito,%2015,%2070043%20Monopoli%20BA+(Chiesa%20San%20Francesco%20D'Assisi)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-            </iframe>
-          </div>
-        </div>
-      </section>
-      <!-- Sezione Ricevimento -->
-      <section id="mappa" class="snap-start h-screen bg-white p-4">
-        <h2 class="text-5xl text-red-800 mb-12 text-center lg:text-left">Luogo dell'Evento</h2>
-        <div class="grid lg:grid-cols-2 gap-2">
-          <div class="grid grid-cols-3 items-center lg:block gap-2">
-            <a href="https://www.tenutamonacelle.com/"><img class="w-full lg:w-1/2" alt="Tenuta Monacelle"
-                src="https://www.tenutamonacelle.com/templates/bds/public/images/logo.png" /></a>
-            <div class="col-span-2 m-4">
-              <span>
-                <a class="font-bold" href="https://www.tenutamonacelle.com/">Tenuta Monacelle</a>
-                <p class="select-all underline decoration-pink-500 decoration-2 text-sm">Viale Monacelle, Monopoli,
-                  Italia</p>
-                <a href="https://my.matterport.com/show/?m=8u4AqAEKubj&utm_source=3">Virtual Tour</a>
-              </span>
-            </div>
-          </div>
-          <div class="h-[40vh] lg:h-screen my-4">
-            <iframe class="w-full h-full lg:aspect-square lg:h-auto rounded-xl drop-shadow-lg" frameborder="0"
-              scrolling="no" marginheight="0" marginwidth="0"
-              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=it&amp;q=Strada,%20Viale%20Monacelle,%2070043%20Monopoli%20BA+(Tenuta%20Monacelle)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-            </iframe>
-          </div>
-        </div>
-      </section>
-
-      <section id="faq" class="snap-start h-[calc(100vh-8rem)] p-4 bg-white flex flex-col">
-        <h2 class="text-5xl text-red-800 mb-12 text-center lg:text-left">Domande Frequenti</h2>
-        <h2 class="text-2xl text-red-800">Parcheggi Vicini</h2>
-        <ul class="list-none p-0">
-          <li class="mb-2">
-            Parcheggio Gratuito (650m) -
-            <a href="https://maps.app.goo.gl/3Qo1Y1Bns3q5wwqEA" class="text-blue-500">Indicazioni</a>
-          </li>
-          <li class="mb-2">
-            Parcheggio Gratuito (600m) -
-            <a href="https://maps.app.goo.gl/S6mKXbEhmEAu7qk28" class="text-blue-500">Indicazioni</a>
-          </li>
-          <li class="mb-2">
-            Parcheggio Privato Custodito (450m) -
-            <a href="https://maps.app.goo.gl/Lw81ZuCs9W1W7fCd9" class="text-blue-500">Indicazioni</a>
-          </li>
-        </ul>
-        <h2 class="text-2xl text-red-800">Alberghi Consigliati</h2>
-        <ul class="list-none p-0">
-          <li class="mb-4">
-            <h3 class="text-2xl font-bold">Tuo Hotel</h3>
-            <p>⭐⭐⭐⭐ - 20 min. dall'evento</p>
-            <a href="https://www.tuohotelpolignano.it" class="text-blue-500">Prenota Ora</a>
-          </li>
-          <li class="mb-4">
-            <h3 class="text-2xl font-bold">Demetra Trulli Experience</h3>
-            <p>⭐⭐⭐ - 10 min. dall'evento</p>
-            <a href="https://katestravelexperience.eu/demetra-citta-metropolitana-di-bari-italy"
-              class="text-blue-500">Prenota Ora</a>
-          </li>
-        </ul>
-      </section>
-      <!-- Nuova sezione: Conferma partecipazione e info -->
-      <section id="conferma" class="snap-start bg-white p-4 flex flex-col items-center border-t border-gray-200">
-        <h2 class="text-4xl text-red-800 mb-4 text-center">
-          Il regalo più grande sarà avervi con noi nel nostro giorno speciale.
+    <!-- Invito -->
+    <section id="invito" class="py-20">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-5xl md:text-6xl text-red-800 mb-6 text-center drop-shadow" lang="it">Benvenuti!
         </h2>
-        <p class="mb-4 text-lg text-center">
-          Se desiderate lasciarci un pensiero, potete contribuire al nostro viaggio e ai nostri sogni futuri con un
-          regalo libero.
+        <h2 class="text-5xl md:text-6xl text-red-800 mb-6 text-center drop-shadow" lang="en">Welcome!
+        </h2>
+        <p class="leading-relaxed mb-4 text-center" lang="it">
+          Siamo felici di festeggiare il nostro giorno speciale con voi. Scoprite tutti i dettagli qui sotto e
+          confermate la vostra presenza.
         </p>
-        <div class="flex flex-col md:flex-row gap-6 md:gap-8 w-full max-w-3xl justify-center items-stretch mb-4">
-          <!-- Box 1: IBAN -->
-          <div class="flex-1 bg-gray-50 rounded-xl shadow p-6 flex flex-col items-center mb-4 md:mb-0 min-w-[250px]">
-            <span class="block font-bold text-xl mb-2 text-red-800">💌 IBAN</span>
-            <div class="select-all text-lg bg-white rounded px-2 py-1 mb-2 break-all font-mono text-center w-full">
-              IT35V0200801622000105444313
-            </div>
-            <div class="text-base mb-1 text-center">Intestato a: Cristiano Mazzella</div>
-            <div class="text-base mb-2 text-center">Causale: "Regalo di nozze – Tuo Nome"</div>
-            <div class="italic text-base mt-2 text-center">Grazie di cuore,<br>con affetto e gratitudine.</div>
+        <p class="leading-relaxed mb-4 text-center" lang="en">
+          We're thrilled to celebrate our special day with you. Find all details below and remember to RSVP.
+        </p>
+      </div>
+    </section>
+
+    <!-- Cerimonia -->
+    <section id="chiesa" class="py-20 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8">
+        <div>
+          <h2 class="text-5xl text-red-800 mb-12 text-center lg:text-left" lang="it">Cerimonia Religiosa</h2>
+          <h2 class="text-5xl text-red-800 mb-12 text-center lg:text-left" lang="en">Religious Ceremony</h2>
+          <p class="font-semibold mb-2">Chiesa di San Francesco d'Assisi</p>
+          <p class="underline decoration-pink-500 decoration-2 mb-2 text-sm">Largo Plebiscito 15, 70043
+            Monopoli (BA)</p>
+          <p class="mb-4" lang="it">⏰ La messa inizierà alle 11:30.</p>
+          <p class="mb-4" lang="en">⏰ Ceremony starting at 11:30 AM.</p>
+          <a href="https://maps.app.goo.gl/xxxxx" class="text-blue-600 hover:underline" lang="it">Apri su
+            Google Maps</a>
+          <a href="https://maps.app.goo.gl/xxxxx" class="text-blue-600 hover:underline" lang="en">Open in
+            Google Maps</a>
+        </div>
+        <iframe loading="lazy" class="w-full h-64 md:h-full rounded-lg shadow-lg"
+          src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Largo%20Plebiscito,%2015,%2070043%20Monopoli%20BA+(Chiesa%20San%20Francesco%20D'Assisi)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <!-- Ricevimento -->
+    <section id="ricevimento" class="py-20">
+      <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8">
+        <iframe loading="lazy" class="w-full h-64 md:h-full rounded-lg shadow-lg"
+          src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=it&amp;q=Strada,%20Viale%20Monacelle,%2070043%20Monopoli%20BA+(Tenuta%20Monacelle)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div>
+          <h2 class="text-5xl text-red-800 mb-12 text-center lg:text-left" lang="it">Ricevimento</h2>
+          <h2 class="text-5xl text-red-800 mb-12 text-center lg:text-left" lang="en">Reception</h2>
+          <p class="font-semibold mb-2">Tenuta Monacelle</p>
+          <p class="underline decoration-pink-500 decoration-2 mb-2 text-sm">Viale Monacelle, Monopoli
+            (BA)</p>
+          <a href="https://my.matterport.com/show/?m=8u4AqAEKubj" class="text-blue-600 hover:underline" lang="it">Tour
+            virtuale</a>
+          <a href="https://my.matterport.com/show/?m=8u4AqAEKubj" class="text-blue-600 hover:underline"
+            lang="en">Virtual tour</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl text-red-800 mb-8" lang="it">Domande Frequenti</h2>
+        <h2 class="text-3xl md:text-4xl text-red-800 mb-8" lang="en">Frequently Asked Questions</h2>
+
+        <h3 class="text-2xl text-red-800 mb-4" lang="it">Parcheggi Vicini</h3>
+        <h3 class="text-2xl text-red-800 mb-4" lang="en">Nearby Parking</h3>
+        <ul class="space-y-2" lang="it">
+          <li>Parcheggio Gratuito (650 m) – <a class="text-blue-600 hover:underline"
+              href="https://maps.app.goo.gl/3Qo1Y1Bns3q5wwqEA">Indicazioni</a></li>
+          <li>Parcheggio Gratuito (600 m) – <a class="text-blue-600 hover:underline"
+              href="https://maps.app.goo.gl/S6mKXbEhmEAu7qk28">Indicazioni</a></li>
+          <li>Parcheggio Privato Custodito (450 m) – <a class="text-blue-600 hover:underline"
+              href="https://maps.app.goo.gl/Lw81ZuCs9W1W7fCd9">Indicazioni</a></li>
+        </ul>
+        <ul class="space-y-2" lang="en">
+          <li>Free Parking (650 m) – <a class="text-blue-600 hover:underline"
+              href="https://maps.app.goo.gl/3Qo1Y1Bns3q5wwqEA">Directions</a></li>
+          <li>Free Parking (600 m) – <a class="text-blue-600 hover:underline"
+              href="https://maps.app.goo.gl/S6mKXbEhmEAu7qk28">Directions</a></li>
+          <li>Private Guarded Parking (450 m) – <a class="text-blue-600 hover:underline"
+              href="https://maps.app.goo.gl/Lw81ZuCs9W1W7fCd9">Directions</a></li>
+        </ul>
+
+        <h3 class="text-2xl text-red-800 mt-8 mb-4" lang="it">Alberghi Consigliati</h3>
+        <h3 class="text-2xl text-red-800 mt-8 mb-4" lang="en">Recommended Hotels</h3>
+        <div class="space-y-6">
+          <div>
+            <p class="font-bold text-xl">Tuo Hotel</p>
+            <p lang="it">⭐⭐⭐⭐ – 20 min dall'evento</p>
+            <p lang="en">⭐⭐⭐⭐ – 20 min from venue</p>
+            <a href="https://www.tuohotelpolignano.it" class="text-blue-600 hover:underline" lang="it">Prenota ora</a>
+            <a href="https://www.tuohotelpolignano.it" class="text-blue-600 hover:underline" lang="en">Book now</a>
           </div>
-          <!-- Box 2: Contatti -->
-          <div class="flex-1 bg-gray-50 rounded-xl shadow p-6 flex flex-col items-center min-w-[250px]">
-            <span class="block font-bold text-xl mb-2 text-red-800">Contatti</span>
-            <ul class="text-lg text-center w-full">
-              <li class="mb-2">
-                <span class="font-semibold">Nella:</span>
-                <a href="tel:+393318343142" class="text-blue-500 break-all">+39 331 834 3142</a>
-              </li>
-              <li>
-                <span class="font-semibold">Cristiano:</span>
-                <a href="tel:+393383231742" class="text-blue-500 break-all">+39 338 323 1742</a>
-              </li>
+          <div>
+            <p class="font-bold text-xl">Demetra Trulli Experience</p>
+            <p lang="it">⭐⭐⭐ – 10 min dall'evento</p>
+            <p lang="en">⭐⭐⭐ – 10 min from venue</p>
+            <a href="https://katestravelexperience.eu/demetra-citta-metropolitana-di-bari-italy"
+              class="text-blue-600 hover:underline" lang="it">Prenota ora</a>
+            <a href="https://katestravelexperience.eu/demetra-citta-metropolitana-di-bari-italy"
+              class="text-blue-600 hover:underline" lang="en">Book now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Regalo / Contatti -->
+    <section id="regalo" class="py-20">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl text-red-800 mb-6" lang="it">Il regalo più grande sarà avervi con noi!</h2>
+        <h2 class="text-3xl md:text-4xl text-red-800 mb-6" lang="en">Your presence is the greatest gift!</h2>
+        <p class="mb-8" lang="it">Se desiderate lasciarci un pensiero, potete contribuire al nostro viaggio e ai nostri
+          sogni futuri con un regalo libero.</p>
+        <p class="mb-8" lang="en">Should you wish to give a gift, you can contribute to our future adventures with a
+          free donation.</p>
+
+        <div class="flex flex-col md:flex-row gap-6 md:gap-8 w-full justify-center items-stretch mb-12">
+          <!-- IBAN card -->
+          <div class="flex-1 bg-gray-50 rounded-xl shadow p-6 flex flex-col items-center min-w-[260px]">
+            <span class="block font-bold text-xl mb-2 text-red-800">💌 IBAN</span>
+            <div class="select-all text-lg bg-white rounded px-2 py-1 mb-2 break-all font-mono text-center w-full">IT35
+              V02 0080 1622 0001 0544 4313</div>
+            <div class="text-base mb-1"><span lang="it">Intestato a:</span> <span lang="en">Account holder:</span>
+              Cristiano Mazzella</div>
+            <div class="text-base mb-2"><span lang="it">Causale:</span> <span lang="en">Reference:</span> "Regalo di
+              nozze – Tuo Nome"</div>
+            <div class="italic text-base mt-2 font-bold" lang="it">Grazie di cuore!</div>
+            <div class="italic text-base mt-2 font-bold" lang="en">Thank you from the bottom of our hearts!</div>
+          </div>
+          <!-- Contacts card -->
+          <div class="flex-1 bg-gray-50 rounded-xl shadow p-6 flex flex-col items-center min-w-[260px]">
+            <span class="block font-bold text-xl mb-2 text-red-800" lang="it">Contatti</span>
+            <span class="block font-bold text-xl mb-2 text-red-800" lang="en">Contacts</span>
+            <ul class="text-lg text-center w-full space-y-2">
+              <li><span class="font-semibold">Nella:</span> <a href="tel:+393318343142"
+                  class="text-blue-600 break-all">+39 331 834 3142</a></li>
+              <li><span class="font-semibold">Cristiano:</span> <a href="tel:+393383231742"
+                  class="text-blue-600 break-all">+39 338 323 1742</a></li>
             </ul>
           </div>
         </div>
-      </section>
-    </div>
-    <footer class="bg-lines sticky bottom-0 inset-x-0 flex p-4 py-6 inset-shadow-[0px_1px_2px] inset-shadow-black/33">
-      <a href="https://forms.gle/PGVmFdxh9nP7ofTUA"
-        class="text-xl mx-auto rounded-md bg-gradient-to-tr from-slate-800 to-slate-700 py-4 px-8 border border-transparent text-center text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">Conferma
-        Partecipazione</a>
-    </footer>
+
+        <!-- RSVP button -->
+        <a href="https://forms.gle/PGVmFdxh9nP7ofTUA" target="_blank"
+          class="inline-block rounded-md bg-gradient-to-tr from-slate-800 to-slate-700 py-4 px-8 text-xl text-white shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-600">
+          <span lang="it">Conferma Partecipazione</span>
+          <span lang="en">RSVP</span>
+        </a>
+      </div>
+    </section>
   </main>
+
+  <!-- Footer -->
+  <footer class="bg-red-800 text-white text-center py-6">
+    <p class="text-sm" lang="it">© 2025 Nella & Cristiano – Tutti i diritti riservati.</p>
+    <p class="text-sm" lang="en">© 2025 Nella & Cristiano – All rights reserved.</p>
+  </footer>
+
 </body>
 
 </html>
