@@ -1,67 +1,95 @@
 <!DOCTYPE html>
 <html lang="it" class="snap-y lg:snap-none lg:text-[1.2em] scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Invito al Matrimonio di Marinella & Cristiano </title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Marmelad&family=Meddon&family=Niconne&display=swap" rel="stylesheet">
-  </head>
-  <body class="">
-    <header class="snap-start h-screen grid items-center bg-flower bg-cover bg-center">
-      <div class="max-w-5xl mx-auto p-4">
-        <h1 class="text-4xl lg:text-8xl m-4 text-white text-shadow text-center whitespace-pre-wrap p-8">Cristiano 
-  <span class="text-xl lg:text-6xl">&</span> 
-  Marinella</h1>
-      </div>
-    </header>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invito al Matrimonio di Marinella & Cristiano </title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marmelad&family=Meddon&family=Niconne&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="">
+  <header class="snap-start h-screen grid items-center bg-flower bg-cover bg-center">
+    <div class="max-w-5xl mx-auto p-4">
+      <h1 class="text-4xl lg:text-8xl m-4 text-white text-shadow text-center whitespace-pre-wrap p-8">Nella
+        <span class="text-xl lg:text-6xl">&</span>
+        Cristiano
+      </h1>
+    </div>
+  </header>
 
 
-    <main class="bg-white">
-      <div class="max-w-5xl mx-auto">
+  <main class="bg-white">
+    <div class="max-w-5xl mx-auto">
 
       <section id="invito" class="snap-start h-screen p-4">
-      <h2 class="text-6xl text-red-800 mb-12 text-center lg:text-left">Benvenuti!</h2>
+        <h2 class="text-6xl text-red-800 mb-12 text-center lg:text-left">Benvenuti!</h2>
         <p>
           Siamo felici di festeggiare il nostro giorno speciale con voi.
           Scoprite tutti i dettagli qui sotto.
         </p>
-      <p class="text-4xl mt-8 whitespace-pre-wrap">Sabato,
-20 Settembre 2025</p>
-      <ul class="my-4 leading-8">
-        <li><a href="#mappa">Luogo dell'Evento</a></li>
-        <li><a href="#faq">Programma</a></li>
-        <li><a href="#faq">Domande Frequenti</a></li>
-      </ul>
+        <p class="text-4xl mt-8 whitespace-pre-wrap">Sabato,
+          20 Settembre 2025</p>
+        <ul class="my-4 leading-8">
+          <li><a href="#chiesa">Cerimonia Religiosa</a></li>
+          <li><a href="#mappa">Luogo dell'Evento</a></li>
+          <li><a href="#faq">Domande Frequenti</a></li>
+          <li><a href="#conferma">Conferma Partecipazione</a></li>
+        </ul>
       </section>
 
+      <!-- Sezione Chiesa -->
+      <section id="chiesa" class="snap-start h-screen bg-white p-4">
+        <h2 class="text-5xl text-red-800 mb-12 text-center lg:text-left">Cerimonia Religiosa</h2>
+        <div class="grid lg:grid-cols-2 gap-2">
+          <div class="grid grid-cols-3 items-center lg:block gap-2">
+            <div class="col-span-2 m-4">
+              <span>
+                <a class="font-bold">Chiesa di San Francesco d'Assisi</a>
+                <p class="select-all underline decoration-pink-500 decoration-2 text-sm">Largo Plebiscito, 15, 70043
+                  Monopoli BA, Italia</p>
+                <a
+                  href="https://www.google.com/maps/place/Chiesa+di+San+Francesco+d'Assisi/@40.952891,17.3003746,18.25z/data=!4m6!3m5!1s0x1346350070e72ecd:0xec9bd94389ec0748!8m2!3d40.9526458!4d17.3012147!16s%2Fg%2F11lcym693j?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D">Indicazioni
+                  Google Maps</a>
+                <p class="text-lg font-bold text-red-800 mb-2">⏰ La messa inizierà alle 11:30</p>
+              </span>
+            </div>
+          </div>
+          <div style="width: 100%">
+            <iframe class="w-full h-full lg:aspect-square lg:h-auto rounded-xl drop-shadow-lg" width="100%" height="600"
+              frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Largo%20Plebiscito,%2015,%2070043%20Monopoli%20BA+(Chiesa%20San%20Francesco%20D'Assisi)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+            </iframe>
+          </div>
+        </div>
+      </section>
+      <!-- Sezione Ricevimento -->
       <section id="mappa" class="snap-start h-screen bg-white p-4">
         <h2 class="text-5xl text-red-800 mb-12 text-center lg:text-left">Luogo dell'Evento</h2>
         <div class="grid lg:grid-cols-2 gap-2">
-        <div class="grid grid-cols-3 items-center lg:block gap-2">
-        <a href="https://www.tenutamonacelle.com/"><img class="w-full lg:w-1/2" alt="Tenuta Monacelle" src="https://www.tenutamonacelle.com/templates/bds/public/images/logo.png" /></a>
-        <div class="col-span-2 m-4">
-          <span>
-            <a class="font-bold" href="https://www.tenutamonacelle.com/">Tenuta Monacelle</a>
-            <p class="select-all underline decoration-pink-500 decoration-2 text-sm">Viale Monacelle, Monopoli, Italia</p>
-            <a href="https://my.matterport.com/show/?m=8u4AqAEKubj&utm_source=3">Virtual Tour</a>
-          </span>
-        </div>
-        </div>
-        <div class="h-[40vh] lg:h-screen my-4">
-          <iframe
-            class="w-full h-full lg:aspect-square lg:h-auto rounded-xl drop-shadow-lg"
-            frameborder="0"
-            scrolling="no"
-            marginheight="0"
-            marginwidth="0"
-            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Strada,%20Viale%20Monacelle,%2070043%20Monopoli%20BA+(Tenuta%20Monacelle)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-          >
-          </iframe>
-        </div>
+          <div class="grid grid-cols-3 items-center lg:block gap-2">
+            <a href="https://www.tenutamonacelle.com/"><img class="w-full lg:w-1/2" alt="Tenuta Monacelle"
+                src="https://www.tenutamonacelle.com/templates/bds/public/images/logo.png" /></a>
+            <div class="col-span-2 m-4">
+              <span>
+                <a class="font-bold" href="https://www.tenutamonacelle.com/">Tenuta Monacelle</a>
+                <p class="select-all underline decoration-pink-500 decoration-2 text-sm">Viale Monacelle, Monopoli,
+                  Italia</p>
+                <a href="https://my.matterport.com/show/?m=8u4AqAEKubj&utm_source=3">Virtual Tour</a>
+              </span>
+            </div>
+          </div>
+          <div class="h-[40vh] lg:h-screen my-4">
+            <iframe class="w-full h-full lg:aspect-square lg:h-auto rounded-xl drop-shadow-lg" frameborder="0"
+              scrolling="no" marginheight="0" marginwidth="0"
+              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=it&amp;q=Strada,%20Viale%20Monacelle,%2070043%20Monopoli%20BA+(Tenuta%20Monacelle)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+            </iframe>
+          </div>
         </div>
       </section>
 
@@ -70,36 +98,76 @@
         <h2 class="text-2xl text-red-800">Parcheggi Vicini</h2>
         <ul class="list-none p-0">
           <li class="mb-2">
-            Parcheggio Centrale (200m) -
-            <a href="#" class="text-blue-500">Indicazioni</a>
+            Parcheggio Gratuito (650m) -
+            <a href="https://maps.app.goo.gl/3Qo1Y1Bns3q5wwqEA" class="text-blue-500">Indicazioni</a>
           </li>
           <li class="mb-2">
-            Parcheggio Nord (500m) -
-            <a href="#" class="text-blue-500">Indicazioni</a>
+            Parcheggio Gratuito (600m) -
+            <a href="https://maps.app.goo.gl/S6mKXbEhmEAu7qk28" class="text-blue-500">Indicazioni</a>
           </li>
           <li class="mb-2">
-            Parcheggio Sud (700m) -
-            <a href="#" class="text-blue-500">Indicazioni</a>
+            Parcheggio Privato Custodito (450m) -
+            <a href="https://maps.app.goo.gl/Lw81ZuCs9W1W7fCd9" class="text-blue-500">Indicazioni</a>
           </li>
         </ul>
         <h2 class="text-2xl text-red-800">Alberghi Consigliati</h2>
         <ul class="list-none p-0">
           <li class="mb-4">
-            <h3 class="text-xl">Hotel Firenze</h3>
-            <p>⭐⭐⭐⭐ - 300m dall'evento</p>
-            <a href="#" class="text-blue-500">Prenota Ora</a>
+            <h3 class="text-2xl font-bold">Tuo Hotel</h3>
+            <p>⭐⭐⭐⭐ - 20 min. dall'evento</p>
+            <a href="https://www.tuohotelpolignano.it" class="text-blue-500">Prenota Ora</a>
           </li>
           <li class="mb-4">
-            <h3 class="text-xl">Residenza Bella</h3>
-            <p>⭐⭐⭐ - 500m dall'evento</p>
-            <a href="#" class="text-blue-500">Prenota Ora</a>
+            <h3 class="text-2xl font-bold">Demetra Trulli Experience</h3>
+            <p>⭐⭐⭐ - 10 min. dall'evento</p>
+            <a href="https://katestravelexperience.eu/demetra-citta-metropolitana-di-bari-italy"
+              class="text-blue-500">Prenota Ora</a>
           </li>
         </ul>
       </section>
-      </div>
+      <!-- Nuova sezione: Conferma partecipazione e info -->
+      <section id="conferma" class="snap-start bg-white p-4 flex flex-col items-center border-t border-gray-200">
+        <h2 class="text-4xl text-red-800 mb-4 text-center">
+          Il regalo più grande sarà avervi con noi nel nostro giorno speciale.
+        </h2>
+        <p class="mb-4 text-lg text-center">
+          Se desiderate lasciarci un pensiero, potete contribuire al nostro viaggio e ai nostri sogni futuri con un
+          regalo libero.
+        </p>
+        <div class="flex flex-col md:flex-row gap-6 md:gap-8 w-full max-w-3xl justify-center items-stretch mb-4">
+          <!-- Box 1: IBAN -->
+          <div class="flex-1 bg-gray-50 rounded-xl shadow p-6 flex flex-col items-center mb-4 md:mb-0 min-w-[250px]">
+            <span class="block font-bold text-xl mb-2 text-red-800">💌 IBAN</span>
+            <div class="select-all text-lg bg-white rounded px-2 py-1 mb-2 break-all font-mono text-center w-full">
+              IT35V0200801622000105444313
+            </div>
+            <div class="text-base mb-1 text-center">Intestato a: Cristiano Mazzella</div>
+            <div class="text-base mb-2 text-center">Causale: "Regalo di nozze – Tuo Nome"</div>
+            <div class="italic text-base mt-2 text-center">Grazie di cuore,<br>con affetto e gratitudine.</div>
+          </div>
+          <!-- Box 2: Contatti -->
+          <div class="flex-1 bg-gray-50 rounded-xl shadow p-6 flex flex-col items-center min-w-[250px]">
+            <span class="block font-bold text-xl mb-2 text-red-800">Contatti</span>
+            <ul class="text-lg text-center w-full">
+              <li class="mb-2">
+                <span class="font-semibold">Nella:</span>
+                <a href="tel:+393318343142" class="text-blue-500 break-all">+39 331 834 3142</a>
+              </li>
+              <li>
+                <span class="font-semibold">Cristiano:</span>
+                <a href="tel:+393383231742" class="text-blue-500 break-all">+39 338 323 1742</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
     <footer class="bg-lines sticky bottom-0 inset-x-0 flex p-4 py-6 inset-shadow-[0px_1px_2px] inset-shadow-black/33">
-    <a href="https://forms.gle/tShPEWnjE8S2x9PS7" class="text-xl mx-auto rounded-md bg-gradient-to-tr from-slate-800 to-slate-700 py-4 px-8 border border-transparent text-center text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">Conferma Partecipazione</a>
+      <a href="https://forms.gle/PGVmFdxh9nP7ofTUA"
+        class="text-xl mx-auto rounded-md bg-gradient-to-tr from-slate-800 to-slate-700 py-4 px-8 border border-transparent text-center text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">Conferma
+        Partecipazione</a>
     </footer>
-    </main>
-  </body>
+  </main>
+</body>
+
 </html>
