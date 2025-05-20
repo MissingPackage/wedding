@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Marmelad&family=Meddon&family=Niconne&display=swap"
     rel="stylesheet">
 
-  <!-- Open Graph -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Matrimonio di Nella &amp; Cristiano" />
   <meta property="og:description" content="Tutti i dettagli sul nostro grande giorno: cerimonia, ricevimento, RSVP." />
   <meta property="og:image" content="https://example.com/og.jpg" />
@@ -50,7 +50,7 @@
     })();
   </script>
 
-  <!-- Structured Data -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -75,9 +75,9 @@
 <body class="font-sans antialiased bg-white text-gray-800">
 
   <!-- Navbar -->
-  <nav class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">
-    <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
-      <a href="#top" class="text-xl font-semibold text-red-800">N &amp; C</a>
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-200">
+    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+      <h2 href="#top" class="text-xl font-semibold text-red-800">N &amp; C</h2>
       <ul class="hidden md:flex gap-6 font-medium">
         <li><a href="#invito" class="hover:text-red-700"><span lang="it">Invito</span><span lang="en">Invite</span></a>
         </li>
@@ -92,7 +92,7 @@
       <button onclick="toggleLang()" aria-label="Cambia lingua / Switch language"
         class="ml-4 text-2xl flex items-center gap-2">
         <span class="flag lang-it flex items-center gap-1">
-          <span class="fi fi-it w-5 h-5 rounded-sm"></span>
+          <span class="text-xl align-middle">🌐</span>
           <span class="text-base font-semibold">IT</span>
         </span>
         <span class="flag lang-en flex items-center gap-1">
@@ -101,24 +101,24 @@
         </span>
       </button>
       <style>
-        [data-lang="it"] .lang-en,
-        [data-lang="en"] .lang-it {
+        [data-lang="en"] .lang-en,
+        [data-lang="it"] .lang-it {
           display: none;
         }
       </style>
     </div>
   </nav>
 
-  <main id="top" class="pt-[72px]">
+  <main id="top" class="">
     <!-- Hero -->
-    <header class="relative h-screen bg-flower bg-cover bg-center flex items-center justify-center">
+    <header class="relative h-[calc(100vh-10rem)] bg-flower bg-cover bg-center flex items-center justify-center">
       <div class="absolute inset-0 bg-black/40"></div>
       <div class="relative text-center text-white">
         <h1 class="text-5xl md:text-8xl text-shadow">Nella <span class="text-3xl md:text-6xl">&amp;</span> Cristiano
         </h1>
         <p class="mt-4 text-xl md:text-3xl tracking-widest">
-          <span lang="it">Sabato 20 Settembre 2025</span>
-          <span lang="en">Saturday 20 September 2025</span>
+          <span lang="it">Sabato 20 Settembre 2025</span>
+          <span lang="en">Saturday 20 September 2025</span>
         </p>
       </div>
     </header>
@@ -131,11 +131,11 @@
         <h2 class="text-5xl md:text-6xl text-red-800 mb-6 text-center drop-shadow" lang="en">Welcome!
         </h2>
         <p class="leading-relaxed mb-4 text-center" lang="it">
-          Siamo felici di festeggiare il nostro giorno speciale con voi. Scoprite tutti i dettagli qui sotto e
+          Siamo felici di festeggiare il nostro giorno speciale con voi. Scoprite tutti i dettagli qui sotto e
           confermate la vostra presenza.
         </p>
         <p class="leading-relaxed mb-4 text-center" lang="en">
-          We're thrilled to celebrate our special day with you. Find all details below and remember to RSVP.
+          We're thrilled to celebrate our special day with you. Find all details below and remember to RSVP.
         </p>
       </div>
     </section>
@@ -150,11 +150,11 @@
           <p class="underline decoration-pink-500 decoration-2 mb-2 text-sm">Largo Plebiscito 15, 70043
             Monopoli (BA)</p>
           <p class="mb-4" lang="it">⏰ La messa inizierà alle 11:30.</p>
-          <p class="mb-4" lang="en">⏰ Ceremony starting at 11:30 AM.</p>
+          <p class="mb-4" lang="en">⏰ Ceremony starting at 11:30 AM.</p>
           <a href="https://maps.app.goo.gl/xfCxL7HA1Yz4i7zw6" class="text-blue-600 hover:underline" lang="it">Apri su
-            Google Maps</a>
+            Google Maps</a>
           <a href="https://maps.app.goo.gl/xfCxL7HA1Yz4i7zw6" class="text-blue-600 hover:underline" lang="en">Open in
-            Google Maps</a>
+            Google Maps</a>
         </div>
         <iframe loading="lazy" class="w-full h-64 md:h-full rounded-lg shadow-lg"
           src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Largo%20Plebiscito,%2015,%2070043%20Monopoli%20BA+(Chiesa%20San%20Francesco%20D'Assisi)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
@@ -175,9 +175,9 @@
           <p class="underline decoration-pink-500 decoration-2 mb-2 text-sm">Viale Monacelle, Monopoli
             (BA)</p>
           <a href="https://maps.app.goo.gl/iauLzSQLA19DFh5h8" class="text-blue-600 hover:underline" lang="it">Apri su
-            Google Maps</a>
+            Google Maps</a>
           <a href="https://maps.app.goo.gl/iauLzSQLA19DFh5h8" class="text-blue-600 hover:underline" lang="en">Open in
-            Google Maps</a>
+            Google Maps</a>
         </div>
       </div>
     </section>
@@ -212,15 +212,15 @@
         <div class="space-y-6">
           <div>
             <p class="font-bold text-xl">Tuo Hotel</p>
-            <p lang="it">⭐⭐⭐⭐ - 20 min dall'evento</p>
-            <p lang="en">⭐⭐⭐⭐ - 20 min from venue</p>
+            <p lang="it">⭐⭐⭐⭐ - 20 min dall'evento</p>
+            <p lang="en">⭐⭐⭐⭐ - 20 min from venue</p>
             <a href="https://www.tuohotelpolignano.it" class="text-blue-600 hover:underline" lang="it">Prenota ora</a>
             <a href="https://www.tuohotelpolignano.it" class="text-blue-600 hover:underline" lang="en">Book now</a>
           </div>
           <div>
             <p class="font-bold text-xl">Demetra Trulli Experience</p>
-            <p lang="it">⭐⭐⭐ - 10 min dall'evento</p>
-            <p lang="en">⭐⭐⭐ - 10 min from venue</p>
+            <p lang="it">⭐⭐⭐ - 10 min dall'evento</p>
+            <p lang="en">⭐⭐⭐ - 10 min from venue</p>
             <a href="https://katestravelexperience.eu/demetra-citta-metropolitana-di-bari-italy"
               class="text-blue-600 hover:underline" lang="it">Prenota ora</a>
             <a href="https://katestravelexperience.eu/demetra-citta-metropolitana-di-bari-italy"
@@ -259,9 +259,9 @@
             <span class="block font-bold text-xl mb-2 text-red-800" lang="en">Contacts</span>
             <ul class="text-lg text-center w-full space-y-2">
               <li><span class="font-semibold">Nella:</span> <a href="tel:+393318343142"
-                  class="text-blue-600 break-all">+39 331 834 3142</a></li>
+                  class="text-blue-600 break-all">+39 331 834 3142</a></li>
               <li><span class="font-semibold">Cristiano:</span> <a href="tel:+393383231742"
-                  class="text-blue-600 break-all">+39 338 323 1742</a></li>
+                  class="text-blue-600 break-all">+39 338 323 1742</a></li>
             </ul>
           </div>
         </div>
@@ -270,22 +270,18 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-lines sticky bottom-0 inset-x-0 flex flex-col items-center justify-center p-4 py-6 shadow-inner">
+  <footer
+    class="h-28 bg-footer sticky bottom-0 inset-x-0 flex flex-col items-center justify-center p-4 py-6 shadow-inner">
     <a href="https://forms.gle/PGVmFdxh9nP7ofTUA" target="_blank"
-      class="inline-block rounded-md bg-gradient-to-tr from-slate-800 to-slate-700 py-4 px-8 text-xl text-white shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-600 mb-2"
-      lang="it">
-      Conferma Partecipazione
+      class="inline-block rounded-md bg-gradient-to-tr from-slate-800 to-slate-700 py-4 px-8 text-xl text-white shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-600">
+      <span lang="it">Conferma Partecipazione</span>
+      <span lang="en">RSVP</span>
     </a>
-    <a href="https://forms.gle/sYb7jdVA2L34JZaU7" target="_blank"
-      class="inline-block rounded-md bg-gradient-to-tr from-slate-800 to-slate-700 py-4 px-8 text-xl text-white shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-600 mb-2"
-      lang="en">
-      RSVP
-    </a>
-    <div class="text-xs text-white/90 text-center drop-shadow">
-      <p lang="it">© 2025 Nella &amp; Cristiano – Tutti i diritti riservati.</p>
-      <p lang="en">© 2025 Nella &amp; Cristiano – All rights reserved.</p>
-    </div>
   </footer>
+  <div class="bg-footer text-xs text-white/90 text-center p-4 py-6">
+    <p lang="it">© 2025 Nella &amp; Cristiano – Tutti i diritti riservati.</p>
+    <p lang="en">© 2025 Nella &amp; Cristiano – All rights reserved.</p>
+  </div>
 
 </body>
 
